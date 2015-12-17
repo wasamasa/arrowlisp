@@ -1,0 +1,86 @@
+
+
+                _     .---, .---,------.------.
+               | '-.  |   | |   |      |  _   |
+	.------'    '-.   | |   |  ---<  '-'  |
+	|              >  |__   |      |   .--'
+	'------,    ,-'      \  |>---  |   |
+	       |_,-'  |______/__:______'___:
+ 
+
+	ArrowLISP - An interpreter for Purely Symbolic LISP
+	Copyright (C) 1998-2006 Nils M Holm. All rights reserved.
+	See the file LICENSE for conditions of use.
+
+
+	--== Latest News ==--
+
+	The most notable change in this version is the introduction
+	of the VERIFY-ARROWS meta function. Arrow verification makes
+	sure that N is the normal form of X in X => N. See the
+	manual for details.
+
+	Logical falsity is now expressed using :F (truth is T).
+	Sorry about this drastic change, but having an extra
+	symbol for falsity simplifies the implementation of
+	some algorithms significantly.
+
+	Added ArrowLISP Micro KANREN, an implementation of
+	KANREN-like logic programming extensions. See src/amk/
+	for source code and examples.
+
+
+	--== What is ArrowLISP? ==--
+
+	ArrowLISP is an interpreter for a purely symbolic,
+	side effect-free, lexically scoped dialect of LISP.
+	It may be considered an implementation of pure LISP
+	plus global definitions.
+
+
+	--== Installation ==--
+
+	The interpreter is written in ANSI C (C89) and LISP.
+	It should compile without any modifications on a
+	variety of systems including *BSD, Linux, Plan 9
+	(using APE), and W*ndows via MinGW or Cygwin.
+
+	On a typical post-1990 Unix system typing
+
+	make
+	su
+	make install
+	exit
+
+	should work fine.
+
+
+	--== Getting Started ==--
+
+	After installing ArrowLISP, type
+
+	alisp
+
+	to launch the interpreter.
+
+	Typing
+
+	man 7 alisp
+
+	will produce the alisp(7) man page.
+
+	The Reference Manual can be found in the file
+
+	/usr/local/share/doc/alisp/alisp.txt
+
+	(unless you are using a different PREFIX).
+
+
+	--== Feedback ==--
+
+	Please send your input to
+
+	Nils M Holm <nmh@t3x.org>
+
+	Thanks!
+

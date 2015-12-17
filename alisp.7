@@ -1,0 +1,135 @@
+.\" ALISP(7) Manual Page
+.\" Copyright (C) 2003-2006 Nils M Holm. All rights reserved.
+.\" See the file LICENSE for conditions of use.
+.ll 70
+.lt 70
+.ds N "pi
+.de HD		\" Header
+'sp 1v
+.tl 'ArrowLISP(7)'Programming Language'ArrowLISP(7)'
+'sp 2v
+..
+.de FO		\" Footer
+'sp 3v
+.tl 'ArrowLISP''Page %'
+'bp
+..
+.de B
+\fB\\$1\fP
+..
+.de BR
+\fB\\$1\fP\\$2
+..
+.de RB
+\\$1\fB\\$2\\fP
+..
+.de I
+\fI\\$1\fP
+..
+.de IT
+.br
+.sp
+.ti +\\$1
+..
+.de SH		\" subheader macro
+.ne 5
+.sp
+.in 0i
+.nf
+\fB\\$1\fP
+.fi
+.in 1i
+..
+.de ST		\" start a table
+.in 1i
+.nf
+..
+.de ET		\" end a table
+.fi
+.in 0
+..
+.wh 0 HD	\" traps for header
+.wh -5 FO	\" and footer
+.nh		\" disable hyphenation
+.sp
+.SH NAME
+.B "alisp
+- ArrowLISP
+.SH USAGE
+.B "alisp [-L] [-bgi] [-n nodes] [image]
+.SH "DESCRIPTION
+.B ArrowLISP
+is an interpreter for a purely symbolic and applicative dialect of LISP.
+It may be considered an implementation of pure LISP plus global definitions.
+.sp
+The
+.I alisp
+command starts the interpreter.
+.SH "OPTIONS
+.B -b
+.in +4
+Batch mode. In batch mode, no greeting message is printed, and
+the interpreter exists in case of an error rather than returning
+to the read-eval-print loop.
+.in -4
+.sp
+.B -g
+.in +4
+Verbose GC. Report number of free nodes after each GC.
+.in -4
+.sp
+.B -i
+.in +4
+Init mode. Init mode is used to build the initial image file.
+No image is loaded.
+.B "Do not use this option.
+.in -4
+.sp
+.B "-n nodes
+.in +4
+Specify the size of the node pool. Larger pools (up to some limit)
+increase performance. The memory footprint of the ArrowLISP workspace
+is calculated as follows:
+.sp
+nodes * (sizeof(int) * 2 + 1)
+.in -4
+.sp
+.B "-L
+.in +4
+Display the terms of use (license) and exit.
+.in -4
+.sp
+If an
+.B image
+file name is passed to the
+.I alisp
+command, the specified image is loaded instead of the default
+image.
+.SH "FURTHER INFORMATION
+Further information about ArrowLISP is not availabe in manual page
+format. The reference manual in ASCII format can be found in the
+file
+.sp
+.I PREFIX/share/doc/alisp/alisp.txt
+.sp
+(The actual location of
+.I PREFIX
+may vary on your system. By default, it is
+\fI/usr/local\fP.)
+.SH "FILES
+.B PREFIX/share/alisp
+.in +4
+The extension libraries and example programs reside here.
+.in -4
+.SH "ENVIRONMENT
+.B ALISPSRC
+.in +4
+The location of the libraries and example programs.
+.B "(load =file)
+loads
+.I file
+from
+\fI$ALISPSRC/file\fP.
+.in -4
+.SH AUTHOR
+Nils M Holm <nmh@t3x.org>
